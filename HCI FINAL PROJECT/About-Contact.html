@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slice Haven</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-image: url("BG.jpg");
+  background-repeat: repeat;
+}
+
+header {
+  background-color: #141513;
+  color: white;
+  padding: 0.5em 1em;       
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: initial;
+  top: 0;
+  z-index: 10;
+  height: auto;            
+}
+
+.logo {
+  height: 60px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo img {
+  height: 70px;
+  object-fit: contain;
+}
+
+
+nav {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background-color: #e50808;
+  color: white;
+  padding: 0.35em 0.7em;
+  font-size: 0.85em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  transition: 400ms;
+  padding: 1em 2em;
+  border-radius: 10px;
+  display:flow-root;
+  text-decoration: none;
+}
+nav a {
+  background-color: #e50808;
+}
+
+nav a:hover {
+  background-color: #368601;
+  transform: scale(1.04);
+}
+section {
+  padding: 2em;
+}
+main {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section {
+  background-color: #ccc;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.contact-info h2 {
+  font-family: cursive;
+  margin-bottom: 15px;
+  margin-top: 3px;
+}
+
+.contact-info p {
+  text-align: center;
+  margin: 8px 0;
+  font-weight: 500;
+  padding-top: 7px;
+}
+
+.contact-info a {
+  color: black;
+  font-family: cursive;
+  text-decoration: underline;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: cursive;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.about {
+  text-align: center;
+  max-width: 900px;
+  font-family: cursive;
+  font-weight: 600;
+}
+
+.about h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="slice haven logo.png" alt="Slice Haven Logo">
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Menu.html">Menu</a>
+      <a href="Order.html">Order</a>
+      <a href="About-Contact.html">About</a>
+      <a href="About-Contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> 123 Pizza Lane, Flavor Town</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Hours:</strong> Mon–Sun: 11am – 10pm</p>
+      <p>
+        <a href="#">Facebook</a> | <a href="#">Instagram</a>
+      </p>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <section class="about">
+      <h3>About Slice Haven</h3>
+      <p>
+        At Slice Haven, we believe in quality, flavor, and community. Our pizzas are made from scratch daily using locally-sourced ingredients. With every bite, we aim to deliver joy and satisfaction.
+      </p>
+    </section>
+  </section>
+
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact-form');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const message = form.querySelector('textarea').value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    console.log("Form Submitted!");
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    alert("Thank you for contacting Slice Haven!");
+
+    // Optionally, reset the form
+    form.reset();
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+

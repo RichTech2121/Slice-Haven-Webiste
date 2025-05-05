@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background-image: url("BG.jpg");
+  background-repeat: repeat;
+}
+
+header {
+  background-color: #141513;
+  color: white;
+  padding: 0.5em 1em;       
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:initial;
+  top: 0;
+  z-index: 10;
+  height: auto;            
+}
+
+.logo {
+  height: 60px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo img {
+
+  height: 70px;
+  object-fit: contain;
+  display: block;
+}
+
+nav {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  background-color: #e50808;
+  color: white;
+  padding: 0.35em 0.7em;
+  font-size: 0.85em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+
+nav a {
+  color: white;
+  margin: 10px;
+  transition: 400ms;
+  padding: 1em 2em;
+  border-radius: 10px;
+  display:flow-root;
+  text-decoration: none;
+}
+nav a {
+  background-color: #e50808;
+}
+
+nav a:hover {
+  background-color: #368601;
+  transform: scale(1.04);
+}
+
+section {
+  padding: 2em;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/featured/?pizza') no-repeat center center/cover;
+  color: #0f0f0f;
+  text-align: center;
+  padding: 6em 1em;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+}
+
+.cta-button {
+  background: #368601;
+  color: #19100e;
+  padding: 1em 2em;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 1em;
+  text-decoration: none;
+}
+.cta-button:hover{
+  color:#ffffff;
+  background-color: #333;
+  transform: scale(1.04);
+}
+
+.hero {
+  background: url("images/bg-pattern.png") repeat;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: cursive;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.hero-image img,
+.promo-image img {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  border: 3px solid black;
+  margin: 15px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: green;
+  color: rgb(0, 0, 0);
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.footer-msg {
+  font-family: cursive;
+  font-size: 2.0rem;
+  color: black;
+  margin-top: 20px;
+}
+
+
